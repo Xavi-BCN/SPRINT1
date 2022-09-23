@@ -1,0 +1,298 @@
+/* General*/ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black-border: #000000;
+    --yelow-border: #fdf108;
+}
+
+body{
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* Boxes of header*/ 
+.container_header{
+    
+    display: flex;
+    flex-direction: column;
+    background-image: url(./images/header.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-clip: content-box;
+
+}
+
+.container_menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.menu{
+
+    margin: 10px;
+}
+
+.menu_item1{
+    
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.menu_item1 img{
+    
+    width: 64px;
+    height: 64px;
+    
+}
+
+.menu_item2{
+    
+    flex-grow: 3;
+
+}
+
+.menu_item2 ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+ 
+}
+
+.menu_item2 li i{
+    margin-right: 15px;
+    color: #737275;
+   
+}
+.menu_item2 a{
+    text-decoration: none;
+    color: #737275;
+}
+
+.menu_item3{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu_item3 a{
+    color: #737275;
+    margin-right: 10px;
+
+}
+
+
+/* Aqui aplicar efectes */
+.menu_item3 i:hover{
+    color: #5f2cc6;
+}
+
+
+/* Aqui aplicar efectes */
+.menu_item2 a:hover{
+    color: rgb(252, 101, 8);
+    background-color: #c6c1d0bd;
+    border-radius: 5px;
+}
+
+
+
+.container_title{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.container_title h3{
+
+    margin-top: 25px;
+    font-weight: 600;
+    text-align: center;
+    color: orange;
+    opacity: 0.8;
+    background: rgba(181, 181, 181, 0.42);
+    width: 80%;
+    padding: 20px 15px 50px 15px;
+   
+}
+
+/* ARTICLES */
+.container_section{
+    
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container_articles{
+    background-color: #f9ebeb;
+    /* border-right: 5px solid var(--black-border); */
+    width: 70%;
+
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.article{
+    background-color: rgb(231, 231, 231);
+    width: 47%;
+    margin: 10px auto;
+}
+.image-article{
+    position: relative;
+}
+
+.image-article img{
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+.image-article div{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: rgb(255, 255, 104);
+    
+}
+
+
+.title-article h2{
+   color: #fff;
+   text-transform: uppercase;
+   font-weight: 400;
+   letter-spacing: 2px;
+   margin: 5px;
+   background-color: rgb(222, 137, 137);
+   padding: 15px 0 2px 5px;
+
+}
+
+.paragraph-article{
+    column-count: 2;
+    column-gap: 15px;
+    padding: 10px;
+}
+
+.article input{
+    padding: 10px;
+    border-style: none;
+    background: none;
+}
+
+.article input:hover{
+    cursor: pointer;
+}
+
+.long_article{
+    margin: 5px 10px 5px 20px;
+}
+
+.long_article p{
+    text-align: center;
+    font-weight: 800;
+}
+
+
+/* ASIDE */
+
+.container_aside{
+    background-color: rgb(231, 231, 231);
+    width: 30%;
+}
+
+.item_aside{
+   
+    /* margin-top: 50px; */
+    text-align: center;
+}
+.item_aside h3{
+    margin-top: 30px;
+}
+
+.item_aside p{
+   margin: 20px 30px;
+}
+
+/* FOOTER */ 
+.container_footer{
+    background-color: rgb(231, 231, 231);
+    height: 50px;
+    line-height: 50px;
+    font-size: small;
+}
+
+.info_footer p{
+    text-align: center
+    
+    
+}
+
+ /*  Dispositivos pequeños (telefonos, 520px y más) */
+ @media (max-width: 520px) { 
+
+    
+    .container_menu{
+        flex-direction: column;
+        align-items: stretch;    
+    }
+    .article{
+        width: calc(100% - 20px);   
+    }
+    
+    .container_title{
+       margin: auto;
+    }
+
+
+ }
+
+ /*  Dispositivos medianos (tabletas, 768px y más) */
+@media (max-width: 768px) { 
+
+
+    .container_section{
+        /* border: 10px solid var(--yelow-border) ; */
+        flex-direction: column;
+    }
+    .container_articles{    
+        width: auto;
+        border: none;
+        /* border-bottom: 5px solid var(--yelow-border); */
+    
+    }
+
+    .container_aside{
+        width: auto;
+        /* border-top: 5px solid var(--yelow-border); */
+        border-left: none;
+    }
+    
+ }
+
+
+
+
+
+
+
+
+
