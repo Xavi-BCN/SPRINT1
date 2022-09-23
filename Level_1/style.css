@@ -1,0 +1,160 @@
+/* General*/ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black-border: #000000;
+    --yelow-border: #fdf108;
+}
+
+body{
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+/* Boxes of header*/ 
+.container_header{
+    border: 10px solid var(--black-border);
+    
+}
+.container_menu{
+    border-bottom: 7px solid var(--black-border);
+    background-color: #737275;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu{
+    background-color: red;
+    margin: 10px;
+}
+
+.menu_item1{
+    flex-grow: 1;
+}
+
+.menu_item2{
+    flex-grow: 3;
+}
+
+.menu_item3{
+    flex-grow: 1;
+}
+
+.container_title{
+    background-color: orange;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_title .title{
+    background-color: yellow;
+    flex-grow: 1;
+    margin: 0 10px;
+}
+
+/* Boxes center*/
+.container_section{
+    border: 10px solid var(--black-border);
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container_articles{
+    background-color: #737275;
+    border-right: 5px solid var(--black-border);
+    width: 70%;
+
+}
+
+.container_aside{
+    background-color: red;
+    border-left: 5px solid var(--black-border);
+    width: 30%;
+}
+
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.article{
+    background-color: rgb(32, 146, 180);
+    width: 47%;
+    margin: 10px auto;
+    
+}
+
+.long_article{
+    background-color: rgb(124, 199, 222);
+    margin: 10px;
+}
+
+.item_aside{
+    background-color: yellow;
+    margin: 10px;
+}
+
+/* Boxes of footer*/ 
+.container_footer{
+    border: 10px solid var(--black-border);
+}
+
+.info_footer{
+    background-color: yellow;
+}
+
+ /*  Dispositivos pequeños (telefonos, 520px y más) */
+ @media (max-width: 520px) { 
+
+    
+    .container_menu{
+        flex-direction: column;
+        align-items: stretch;    
+    }
+    .article{
+        width: calc(100% - 20px);   
+    }
+
+ }
+
+ /*  Dispositivos medianos (tabletas, 768px y más) */
+@media (max-width: 768px) { 
+
+
+    .container_section{
+        border: 10px solid var(--yelow-border) ;
+        flex-direction: column;
+    }
+    .container_articles{    
+        width: auto;
+        border: none;
+        border-bottom: 5px solid var(--yelow-border);
+    
+    }
+
+    .container_aside{
+        width: auto;
+        border-top: 5px solid var(--yelow-border);
+        border-left: none;
+    }
+    
+ }
+
+
+
+
+
+
+
+
+
